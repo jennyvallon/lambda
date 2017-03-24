@@ -61,7 +61,7 @@ exports.handler = function(event, context, callback) { //callback function handl
                     },
                     UpdateExpression: "SET :a = :b", 
                     ExpressionAttributeValues: {
-                        ":a":Data[obj.nameMinusExt],
+                        ":a":obj.key.prefix[1][obj.nameMinusExt],
                         ":b": obj.body.toString()
                     }
                  };
